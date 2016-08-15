@@ -58,9 +58,9 @@ def sort():
 		try:
 			follower = browser.find_element_by_xpath('/html/body/div[2]/div/div[2]/div/div[2]/ul/li[%s]/div/div[1]/div/div[1]/a' % counter).text
 			followers.append(follower)
-			browser.execute_script("document.querySelector('div._4gt3b').scrollTop += 800;")
+			browser.execute_script("document.querySelector('div._4gt3b').scrollTop += 300;")
 			counter+=1
-			time.sleep(1)	
+			print follower
 
 		except:
 
@@ -79,9 +79,9 @@ def sort():
 		try:
 			followed = browser.find_element_by_xpath('/html/body/div[2]/div/div[2]/div/div[2]/ul/li[%s]/div/div[1]/div/div[1]/a' % counter).text
 			following.append(followed)
-			browser.execute_script("document.querySelector('div._4gt3b').scrollTop += 800;")
+			browser.execute_script("document.querySelector('div._4gt3b').scrollTop += 300;")
 			counter+=1
-			time.sleep(1)
+			print followed
 		except:
 			
 			break
