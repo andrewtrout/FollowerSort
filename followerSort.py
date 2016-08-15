@@ -10,15 +10,16 @@ import time
 import os
 
 
-user_agent = (
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) " +
-    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.57 Safari/537.36"
-)
+#user_agent = (
+#    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) " +
+#    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.57 Safari/537.36"
+#)
 
-dcap = dict(DesiredCapabilities.PHANTOMJS)
-dcap["phantomjs.page.settings.userAgent"] = user_agent
-browser = webdriver.PhantomJS(desired_capabilities=dcap,service_log_path=os.path.devnull)
-browser.set_window_size(1170,1170)
+#dcap = dict(DesiredCapabilities.PHANTOMJS)
+#dcap["phantomjs.page.settings.userAgent"] = user_agent
+#browser = webdriver.PhantomJS(desired_capabilities=dcap,service_log_path=os.path.devnull)
+#browser.set_window_size(1170,1170)
+browser = webdriver.Chrome()
 MY_USER = raw_input("Input Username:")
 MY_PASSWORD = getpass("Input Password:")
 
