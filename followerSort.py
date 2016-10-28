@@ -102,7 +102,8 @@ def sort():
 			for i in diff:
 				browser.get('https://www.instagram.com/%s/' % i)
 				time.sleep(5)
-				browser.find_element_by_xpath('//*[@id="react-root"]/section/main/article/header/div[2]/div[2]/span/span[1]/button').click()
+				button = browser.find_element_by_xpath("//*[contains(text(), 'Following')]")
+				button.click()
 				print "Unfollowed %s!" % i
 				time.sleep(56)
 			break
