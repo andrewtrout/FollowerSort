@@ -19,7 +19,9 @@ import os
 #dcap["phantomjs.page.settings.userAgent"] = user_agent
 #browser = webdriver.PhantomJS(desired_capabilities=dcap,service_log_path=os.path.devnull)
 #browser.set_window_size(1170,1170)
-browser = webdriver.Chrome()
+chromedriver = "/Users/andrewtrout/code/followerSort/chromedriver"
+os.environ["webdriver.chrome.driver"] = chromedriver
+browser = webdriver.Chrome(chromedriver)
 MY_USER = raw_input("Input Username:")
 MY_PASSWORD = getpass("Input Password:")
 
@@ -100,7 +102,7 @@ def sort():
 			for i in diff:
 				browser.get('https://www.instagram.com/%s/' % i)
 
-				browser.find_element_by_xpath('//*[@id="react-root"]/section/main/article/header/div[2]/div[1]/span/button').click()
+				browser.find_element_by_xpath('//*[@id="react-root"]/section/main/article/header/div[2]/div[2]/span/span[1]/button').click()
 				print "Unfollowed %s!" % i
 				time.sleep(61)
 			break
