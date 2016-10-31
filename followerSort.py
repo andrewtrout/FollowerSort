@@ -36,13 +36,13 @@ def logIn():
 	pw = browser.find_element_by_css_selector('input[placeholder="Password"]')
 	pw.send_keys(MY_PASSWORD, Keys.RETURN)
 
-	print "logged in successfully!"
+	
 	
 	time.sleep(1)
 
 def sort():
 
-	print "Sorting Please Wait..."
+
 
 	followers = []
 	following = []
@@ -50,6 +50,10 @@ def sort():
 	browser.get('https://www.instagram.com/%s/' % MY_USER)
 	time.sleep(3)
 	browser.find_element_by_xpath('//*[@id="react-root"]/section/main/article/header/div[2]/ul/li[2]/a').click()
+
+	print "logged in successfully!"
+
+	print "Sorting Please Wait..."
 	time.sleep(3)
 	counter = 1
 
